@@ -30,6 +30,10 @@ pip install django==1.11.5
 pip install djangorestframework==3.6.4
 ```
 
+ - CORS
+```sh
+pip install django-cors-headers
+```
 ## Como usarlo
 
 A la altura del fichero manage.py:
