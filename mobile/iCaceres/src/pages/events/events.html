@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Eventos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list [virtualScroll]="events">
+
+    <button ion-item *virtualItem="let event">
+
+      <ion-icon name="bulb" item-start></ion-icon>
+
+      <h1>{{event.name}}</h1>
+
+      <h3>{{event.date}}</h3>
+
+      <ion-note>{{event.address}}</ion-note>
+
+    </button>
+
+  </ion-list>
+
+</ion-content>

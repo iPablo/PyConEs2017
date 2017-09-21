@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Colegios</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list [virtualScroll]="schools">
+
+    <button ion-item *virtualItem="let school">
+
+      <ion-icon name="school" item-start></ion-icon>
+
+      <h1>{{school.name}}</h1>
+
+      <h3>{{school.type}}</h3>
+
+      <ion-note>{{school.address}}</ion-note>
+
+    </button>
+
+  </ion-list>
+
+
+</ion-content>

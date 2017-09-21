@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Restaurantes</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list [virtualScroll]="restaurants">
+
+    <button ion-item *virtualItem="let restaurant">
+
+      <ion-icon name="restaurant" item-start></ion-icon>
+
+      <h1>{{restaurant.name}}</h1>
+
+      <h3>{{restaurant.address}}</h3>
+
+      <ion-note>{{restaurant.qualification}}</ion-note>
+
+    </button>
+
+  </ion-list>
+
+
+</ion-content>

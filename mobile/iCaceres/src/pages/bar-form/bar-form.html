@@ -1,0 +1,48 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Nuevo bar</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="bar.name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Descripción</ion-label>
+      <ion-textarea [(ngModel)]="bar.description"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Tipo</ion-label>
+      <ion-input type="text" [(ngModel)]="bar.type"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Dirección</ion-label>
+      <ion-input type="text" [(ngModel)]="bar.address"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Hora de apertura</ion-label>
+      <ion-input type="number" [(ngModel)]="bar.openingTime"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Hora de cierre</ion-label>
+      <ion-input type="number" [(ngModel)]="bar.closingTime"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button block (click)="saveBar()">Guardar</button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
