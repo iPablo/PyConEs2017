@@ -2,12 +2,14 @@ from rest_framework import generics
 
 from .models import Event, Kindergarten, School, Shop, Bar, Restaurant
 from .serializers import (EventSerializer, KindergartenSerializer, SchoolSerializer,
-                          ShopSerializer, BarSerializer, RestaurantSerializer)
+                          ShopSerializer, BarSerializer, RestaurantSerializer, EventListSerializer,
+                          RestaurantListSerializer, KindergartenListSerializer, SchoolListSerializer,
+                          ShopListSerializer, BarListSerializer)
 
 
 class EventList(generics.ListCreateAPIView):
     queryset = Event.objects.all()
-    serializer_class = EventSerializer
+    serializer_class = EventListSerializer
 
 
 class EventDetail(generics.RetrieveUpdateDestroyAPIView):
@@ -17,7 +19,7 @@ class EventDetail(generics.RetrieveUpdateDestroyAPIView):
 
 class KindergartenList(generics.ListCreateAPIView):
     queryset = Kindergarten.objects.all()
-    serializer_class = KindergartenSerializer
+    serializer_class = KindergartenListSerializer
 
 
 class KindergartenDetail(generics.RetrieveUpdateDestroyAPIView):
@@ -27,7 +29,7 @@ class KindergartenDetail(generics.RetrieveUpdateDestroyAPIView):
 
 class SchoolList(generics.ListCreateAPIView):
     queryset = School.objects.all()
-    serializer_class = SchoolSerializer
+    serializer_class = SchoolListSerializer
 
 
 class SchoolDetail(generics.RetrieveUpdateDestroyAPIView):
@@ -37,7 +39,7 @@ class SchoolDetail(generics.RetrieveUpdateDestroyAPIView):
 
 class ShopList(generics.ListCreateAPIView):
     queryset = Shop.objects.all()
-    serializer_class = ShopSerializer
+    serializer_class = ShopListSerializer
 
 
 class ShopDetail(generics.RetrieveUpdateDestroyAPIView):
@@ -47,7 +49,7 @@ class ShopDetail(generics.RetrieveUpdateDestroyAPIView):
 
 class BarList(generics.ListCreateAPIView):
     queryset = Bar.objects.all()
-    serializer_class = BarSerializer
+    serializer_class = BarListSerializer
 
 
 class BarDetail(generics.RetrieveUpdateDestroyAPIView):
@@ -57,7 +59,7 @@ class BarDetail(generics.RetrieveUpdateDestroyAPIView):
 
 class RestaurantList(generics.ListCreateAPIView):
     queryset = Restaurant.objects.all()
-    serializer_class = RestaurantSerializer
+    serializer_class = RestaurantListSerializer
 
 
 class RestaurantDetail(generics.RetrieveUpdateDestroyAPIView):
