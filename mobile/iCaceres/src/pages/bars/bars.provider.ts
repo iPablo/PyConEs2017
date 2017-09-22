@@ -17,4 +17,8 @@ export class BarsProvider {
   saveBar(bar: Bar): Observable<Bar> {
     return this.http.post(`${environment.baseUrl}/bar/`, bar).map(response => response.json().results as Bar);
   }
+
+  getBar(barId: number): Observable<Bar> {
+    return this.http.get(`${environment.baseUrl}/bar/${barId}`).map(response => response.json() as Bar);
+  }
 }

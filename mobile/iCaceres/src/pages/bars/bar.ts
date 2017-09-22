@@ -1,5 +1,5 @@
 export interface Bar {
-  id?: number;
+  pk?: number;
   name: string;
   address: string;
   description?: string;

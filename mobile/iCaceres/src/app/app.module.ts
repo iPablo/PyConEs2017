@@ -15,6 +15,7 @@ import { ShopsPageModule } from '../pages/shops/shops.module';
 import { KindergartensPageModule } from '../pages/kindergartens/kindergartens.module';
 import { HttpModule } from '@angular/http';
 import { BarFormPageModule } from '../pages/bar-form/bar-form.module';
+import { BarDetailsPageModule } from '../pages/bar-details/bar-details.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { BarFormPageModule } from '../pages/bar-form/bar-form.module';
     SchoolsPageModule,
     ShopsPageModule,
     KindergartensPageModule,
-    BarFormPageModule
+    BarFormPageModule,
+    BarDetailsPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

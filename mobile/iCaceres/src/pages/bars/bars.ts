@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Bar } from './bar';
 import { BarsProvider } from './bars.provider';
 import { BarFormPage } from '../bar-form/bar-form';
+import { BarDetailsPage } from '../bar-details/bar-details';
 
 /**
  * Generated class for the BarsPage page.
@@ -32,4 +33,7 @@ export class BarsPage {
     this.navCtrl.push(BarFormPage);
   }
 
+  goToBarDetails(barId: number) {
+    this.navCtrl.push(BarDetailsPage, { barId });
+  }
 }

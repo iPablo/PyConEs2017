@@ -12,7 +12,7 @@
 
   <ion-list [virtualScroll]="bars">
 
-    <button ion-item *virtualItem="let bar">
+    <button ion-item *virtualItem="let bar" (click)="goToBarDetails(bar.pk)">
 
       <ion-icon name="beer" item-start></ion-icon>
 
